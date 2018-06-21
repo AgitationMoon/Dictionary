@@ -1,0 +1,11 @@
+# Common
+*.bak
+*.log
+
+# VS
+.vs
+ipch
+*.vcxproj.user
+*.suo
+[Dd]ebug*/
+[Rr]elease*/
