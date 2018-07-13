@@ -31,14 +31,14 @@ public:
 
 	}
 
-	void save_as(string NewName)
-	{
-		if (exists(DictFileName))
-		{
-			copy(DictFileName, NewName);
-		}
+	//void save_as(string NewName)
+	//{
+	//	//if (exists(DictFileName))
+	//	//{
+	//	//	copy(DictFileName, NewName);
+	//	//}
 
-	}
+	//}
 
 	using const_iterator = std::vector<Entry>::const_iterator;
 
@@ -62,7 +62,7 @@ private:
 	std::vector<Entry> m_dictionary;
 };
 
-std::ostream& operator<< (std::ostream& os, const Dictionary::Entry& entry)
+inline std::ostream& operator<< (std::ostream& os, const Dictionary::Entry& entry)
 {
 	os << entry.GermWord << " " << entry.EnglWord;
 	
