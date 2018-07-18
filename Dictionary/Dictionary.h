@@ -38,8 +38,6 @@ public:
 	//	//	copy(DictFileName, NewName);
 	//	//}
 
-	//}
-
 	using const_iterator = std::vector<Entry>::const_iterator;
 
 	const_iterator begin() const
@@ -56,6 +54,17 @@ public:
 	{
 		return m_dictionary.size();
 	}
+
+	Entry& operator[](size_t index)
+	{
+		return m_dictionary[index];
+	}
+
+	const Entry& operator[](size_t index) const 
+	{
+		return m_dictionary[index];
+	}
+
 
 private:
 	std::string m_fileName;
